@@ -1,0 +1,131 @@
+Analysis of Variance Table
+
+Response: log(Cycles, 2)
+                                        Df   Sum Sq Mean Sq  F value Pr(>F)    
+Size.Scatter                            40 12531049  313276 2.92e+07 <2e-16 ***
+Shuffle.Quick                           39    12324     316 2.94e+04 <2e-16 ***
+Leaf.Cache.BranchMerge                  11     3365     306 2.85e+04 <2e-16 ***
+Size.Scatter:Shuffle.Quick            1475     2952       2 1.86e+02 <2e-16 ***
+Size.Scatter:Leaf.Cache.BranchMerge    429      391       1 8.49e+01 <2e-16 ***
+Shuffle.Quick:Leaf.Cache.BranchMerge   429      150       0 3.25e+01 <2e-16 ***
+Residuals                            21577      232       0                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+Analysis of Variance Table
+
+Response: log(Cycles, 2)
+                          Df   Sum Sq Mean Sq F value Pr(>F)    
+Size.Scatter              40 12531049  313276 2011332 <2e-16 ***
+Shuffle.Quick             39    12324     316    2029 <2e-16 ***
+Leaf.Cache.BranchMerge    11     3365     306    1964 <2e-16 ***
+Residuals              23910     3724       0                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+
+Call:
+lm(formula = log(Cycles, 2) ~ Size.Scatter + Shuffle.Quick + 
+    Leaf.Cache.BranchMerge + 0, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.5650 -0.2395 -0.0186  0.2233  2.1683 
+
+Coefficients:
+                               Estimate Std. Error t value Pr(>|t|)    
+Size.Scatter32x10              12.60101    0.02431  518.30  < 2e-16 ***
+Size.Scatter32x500             12.65034    0.02414  523.98  < 2e-16 ***
+Size.Scatter32xF               12.57545    0.02431  517.19  < 2e-16 ***
+Size.Scatter32xT               12.64220    0.02423  521.78  < 2e-16 ***
+Size.Scatter138x10             14.76927    0.02422  609.70  < 2e-16 ***
+Size.Scatter138x500            14.81878    0.02433  609.04  < 2e-16 ***
+Size.Scatter138xF              14.76646    0.02440  605.16  < 2e-16 ***
+Size.Scatter138xT              14.86926    0.02441  609.04  < 2e-16 ***
+Size.Scatter597x10             16.94459    0.02423  699.35  < 2e-16 ***
+Size.Scatter597x500            17.01133    0.02405  707.37  < 2e-16 ***
+Size.Scatter597xF              16.92096    0.02422  698.66  < 2e-16 ***
+Size.Scatter597xT              16.98244    0.02451  692.94  < 2e-16 ***
+Size.Scatter2580x10            19.07527    0.02415  789.99  < 2e-16 ***
+Size.Scatter2580x500           19.13047    0.02413  792.85  < 2e-16 ***
+Size.Scatter2580xF             19.07260    0.02423  787.08  < 2e-16 ***
+Size.Scatter2580xT             19.19085    0.02432  789.17  < 2e-16 ***
+Size.Scatter11148x10           21.14983    0.02431  869.85  < 2e-16 ***
+Size.Scatter11148x500          21.30288    0.02396  889.15  < 2e-16 ***
+Size.Scatter11148xF            21.17385    0.02432  870.69  < 2e-16 ***
+Size.Scatter11148xT            21.64323    0.02433  889.52  < 2e-16 ***
+Size.Scatter48160x10           23.37221    0.02414  968.10  < 2e-16 ***
+Size.Scatter48160x500          23.55107    0.02432  968.39  < 2e-16 ***
+Size.Scatter48160xF            23.35388    0.02423  963.70  < 2e-16 ***
+Size.Scatter48160xT            24.61286    0.02431 1012.41  < 2e-16 ***
+Size.Scatter208064x10          25.57952    0.02396 1067.50  < 2e-16 ***
+Size.Scatter208064x500         25.69089    0.02413 1064.54  < 2e-16 ***
+Size.Scatter208064xF           25.58548    0.02415 1059.62  < 2e-16 ***
+Size.Scatter208064xT           27.30227    0.02414 1130.92  < 2e-16 ***
+Size.Scatter898885x10          27.83050    0.02422 1148.89  < 2e-16 ***
+Size.Scatter898885x500         27.83356    0.02414 1153.16  < 2e-16 ***
+Size.Scatter898885xF           27.77466    0.02413 1151.26  < 2e-16 ***
+Size.Scatter898885xT           30.02311    0.02404 1248.86  < 2e-16 ***
+Size.Scatter3883400x10         30.07150    0.02442 1231.52  < 2e-16 ***
+Size.Scatter3883400x500        30.00525    0.02423 1238.43  < 2e-16 ***
+Size.Scatter3883400xF          30.01437    0.02413 1244.00  < 2e-16 ***
+Size.Scatter3883400xT          33.03877    0.02441 1353.36  < 2e-16 ***
+Size.Scatter16777216x10        32.12685    0.02422 1326.28  < 2e-16 ***
+Size.Scatter16777216x500       32.12246    0.02404 1335.93  < 2e-16 ***
+Size.Scatter16777216xF         32.16609    0.02441 1317.89  < 2e-16 ***
+Size.Scatter16777216xT         35.50984    0.02423 1465.37  < 2e-16 ***
+Shuffle.QuickFx8               -2.13508    0.02287  -93.37  < 2e-16 ***
+Shuffle.QuickFx16              -1.87832    0.02285  -82.19  < 2e-16 ***
+Shuffle.QuickFx32              -1.71007    0.02284  -74.86  < 2e-16 ***
+Shuffle.QuickFxF               -0.64569    0.02286  -28.24  < 2e-16 ***
+Shuffle.Quick1x8               -1.60291    0.02286  -70.12  < 2e-16 ***
+Shuffle.Quick1x16              -1.48993    0.02284  -65.22  < 2e-16 ***
+Shuffle.Quick1x32              -1.39072    0.02282  -60.95  < 2e-16 ***
+Shuffle.Quick1xF               -0.55361    0.02284  -24.24  < 2e-16 ***
+Shuffle.Quick2x8               -1.44064    0.02283  -63.09  < 2e-16 ***
+Shuffle.Quick2x16              -1.27655    0.02287  -55.82  < 2e-16 ***
+Shuffle.Quick2x32              -1.21146    0.02285  -53.02  < 2e-16 ***
+Shuffle.Quick2xF               -0.55295    0.02287  -24.17  < 2e-16 ***
+Shuffle.Quick5x8               -1.09660    0.02287  -47.96  < 2e-16 ***
+Shuffle.Quick5x16              -1.01742    0.02284  -44.54  < 2e-16 ***
+Shuffle.Quick5x32              -0.93842    0.02285  -41.08  < 2e-16 ***
+Shuffle.Quick5xF               -0.45761    0.02283  -20.04  < 2e-16 ***
+Shuffle.Quick10x8              -0.84621    0.02287  -37.00  < 2e-16 ***
+Shuffle.Quick10x16             -0.80352    0.02287  -35.14  < 2e-16 ***
+Shuffle.Quick10x32             -0.73289    0.02284  -32.09  < 2e-16 ***
+Shuffle.Quick10xF              -0.38222    0.02285  -16.73  < 2e-16 ***
+Shuffle.Quick50x8              -0.49277    0.02286  -21.56  < 2e-16 ***
+Shuffle.Quick50x16             -0.44948    0.02286  -19.66  < 2e-16 ***
+Shuffle.Quick50x32             -0.39729    0.02285  -17.39  < 2e-16 ***
+Shuffle.Quick50xF              -0.19453    0.02286   -8.51  < 2e-16 ***
+Shuffle.Quick100x8             -0.33741    0.02289  -14.74  < 2e-16 ***
+Shuffle.Quick100x16            -0.32902    0.02285  -14.40  < 2e-16 ***
+Shuffle.Quick100x32            -0.30657    0.02281  -13.44  < 2e-16 ***
+Shuffle.Quick100xF             -0.11149    0.02286   -4.88  1.1e-06 ***
+Shuffle.Quick500x8             -0.11875    0.02287   -5.19  2.1e-07 ***
+Shuffle.Quick500x16            -0.10816    0.02285   -4.73  2.2e-06 ***
+Shuffle.Quick500x32            -0.08507    0.02285   -3.72   0.0002 ***
+Shuffle.Quick500xF              0.00865    0.02286    0.38   0.7053    
+Shuffle.Quick1000x8            -0.03516    0.02287   -1.54   0.1243    
+Shuffle.Quick1000x32           -0.02096    0.02284   -0.92   0.3588    
+Shuffle.Quick1000xF             0.06673    0.02283    2.92   0.0035 ** 
+Shuffle.QuickTx8                0.71362    0.02286   31.22  < 2e-16 ***
+Shuffle.QuickTx16               0.78102    0.02284   34.19  < 2e-16 ***
+Shuffle.QuickTx32               0.76039    0.02284   33.29  < 2e-16 ***
+Shuffle.QuickTxF                0.84590    0.02284   37.03  < 2e-16 ***
+Leaf.Cache.BranchMergeCMOVxFxT -0.64106    0.01248  -51.37  < 2e-16 ***
+Leaf.Cache.BranchMergeCMOVxTxF  0.02932    0.01248    2.35   0.0188 *  
+Leaf.Cache.BranchMergeCMOVxTxT -0.65298    0.01248  -52.32  < 2e-16 ***
+Leaf.Cache.BranchMergeFxFxF     0.30856    0.01248   24.72  < 2e-16 ***
+Leaf.Cache.BranchMergeFxFxT    -0.43997    0.01248  -35.25  < 2e-16 ***
+Leaf.Cache.BranchMergeFxTxF     0.29306    0.01248   23.48  < 2e-16 ***
+Leaf.Cache.BranchMergeFxTxT    -0.44372    0.01248  -35.55  < 2e-16 ***
+Leaf.Cache.BranchMergeTxFxF     0.01703    0.01248    1.36   0.1725    
+Leaf.Cache.BranchMergeTxFxT    -0.70801    0.01248  -56.73  < 2e-16 ***
+Leaf.Cache.BranchMergeTxTxF     0.02323    0.01248    1.86   0.0627 .  
+Leaf.Cache.BranchMergeTxTxT    -0.68746    0.01248  -55.08  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+
+Residual standard error: 0.395 on 23910 degrees of freedom
+Multiple R-squared:    1,	Adjusted R-squared:    1 
+F-statistic: 8.95e+05 on 90 and 23910 DF,  p-value: <2e-16 
+
